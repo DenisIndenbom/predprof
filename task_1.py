@@ -1,6 +1,5 @@
 from csv import DictReader, DictWriter
 from datetime import datetime
-from os import write
 
 def get_datetime(date_string: str):
     """
