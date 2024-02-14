@@ -1,13 +1,15 @@
 from random import choice
 from csv import DictReader, DictWriter
 
-def fast_sort(arr, key = lambda x: x):
+def fast_sort(arr: list, key = lambda x: x):
     """
     Алгоритм быстрой сортировки
 
     arr - список, который нужно отсортировать
 
     key - ключь по которому идёт сортировка (lambda функция или просто функция) 
+
+    return: отсортированный список
     """
     if len(arr) <= 1:
         return arr

@@ -6,6 +6,8 @@ def get_datetime(date_string: str):
     Функция конвертирует дату в виде строки в обьект класса datetime
 
     date_string - cтрока с датой
+
+    return: дата (datetime)
     """
     date_raw = date_string.split('.')
 
@@ -22,6 +24,8 @@ def calculate_streams(artist_name: str, song_name: str, date_now: str, date_publ
     date_now - время сейчас
     
     date_public - дата публикация песни
+
+    return: число (int)
     """
     return abs((get_datetime(date_now) - get_datetime(date_public)).days / (len(artist_name) + len(song_name))) * 10000
 
