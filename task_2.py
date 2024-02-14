@@ -1,5 +1,5 @@
 from random import choice
-from csv import DictReader, DictWriter
+from csv import DictReader
 
 def fast_sort(arr: list, key = lambda x: x):
     """

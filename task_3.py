@@ -1,4 +1,4 @@
-from csv import DictReader, DictWriter
+from csv import DictReader
 
 # Загруза данных 
 with open('songs.csv', encoding='utf-8-sig') as file:
