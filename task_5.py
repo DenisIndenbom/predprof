@@ -25,7 +25,11 @@ d = dict((row, i) for i, row in enumerate(alph))
 with open('songs.csv', encoding='utf-8-sig') as file:
     data = list(DictReader(file, delimiter=';'))
 
+count = {}
+
 # Хешируем БД
 for row in data:
     row['hash'] = hash(row['name'], d)
+    count[row['hash']] = count.get(row['hash'], 0) + 1
 
+print(sorted(list(count.items()))[:10])
