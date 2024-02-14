@@ -14,7 +14,15 @@ def get_datetime(date_string: str):
 
 def calculate_streams(artist_name: str, song_name: str, date_now: str, date_public: str):
     """
+    Фунция считает кол-во просмотров по заданой формуле
+
+    artist_name - имя артиста
+
+    song_name - название песни
+
+    date_now - время сейчас
     
+    date_public - дата публикация песни
     """
     return abs((get_datetime(date_now) - get_datetime(date_public)).days / (len(artist_name) + len(song_name))) * 10000
 
